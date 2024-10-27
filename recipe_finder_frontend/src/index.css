@@ -1,13 +1,290 @@
+/* Import the Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFF8F7;
+  /* Light Pink */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* App Styles */
+.App {
+  text-align: center;
+}
+
+/* Header Styles */
+.App-header {
+  background-color: #256763;
+  /* Dark Teal */
+  padding: 1rem;
+  width: 100%;
+  color: white;
+}
+
+.App-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFF8F7;
+  /* Light Pink */
+}
+
+/* Banner Styles */
+.banner {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: #4ABEB0;
+  /* Teal */
+  color: white;
+}
+
+/* Contenedor de la barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Espacio entre el input y el botón */
+  max-width: 600px;
+  margin: 2rem auto;
+  /* Centrar la barra de búsqueda */
+  padding: 0.5rem;
+  background-color: #b8f3e7;
+  /* Light Green */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Sombra ligera */
+}
+
+/* Icono de la barra de búsqueda */
+.search-bar .icon-search {
+  color: #256763;
+  /* Dark Teal */
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  /* Espacio entre el icono y el borde */
+}
+
+/* Estilo del input */
+.search-bar input[type="text"] {
+  flex-grow: 1;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px 8px 8px 8px;
+  /* Bordes solo en las esquinas derechas */
+  background-color: transparent;
+  /* Fondo transparente para integrarse con el contenedor */
+  color: #256763;
+  /* Dark Teal */
+  outline: none;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  text-align: center;
+  /* Center text horizontally */
+  display: flex;
+  align-items: center;
+  /* Center text vertically */
+  justify-content: center;
+  /* Center text horizontally */
+}
+
+/* Hover y focus para el input */
+.search-bar input[type="text"]:focus {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #256763;
+  /* Dark Teal */
+  border-color: #4ABEB0;
+  /* Teal */
+  box-shadow: 0 0 5px rgba(74, 190, 176, 0.3);
+  /* Sombra ligera en focus */
+}
+
+/* Estilo del botón */
+.search-bar button {
+  background-color: #d96f2d;
+  /* Dark Teal */
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover y focus para el botón */
+.search-bar button:hover {
+  background-color: #e08e5b;
+  /* Teal */
+  transform: scale(1.05);
+  /* Ligeramente más grande en hover */
+}
+
+.search-bar button:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(74, 190, 176, 0.6);
+  /* Sombra intensa para accesibilidad */
+}
+
+/* Results Styles */
+.Results {
+  background-color: #256763;
+  /* Light Green */
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.Results-Title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #d96f2d;
+  /* Dark Teal */
+}
+
+.Results-List {
+  background-color: #d7f2ef;
+  /* Teal */
+  padding: 1rem;
+  border-radius: 8px;
+  list-style-type: none;
+  margin: 0;
+}
+
+.Results-Item {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Results-Item:hover {
+  background-color: #256763;
+  /* Dark Teal */
+  color: white;
+}
+/* Header Styles */
+.Home-header,
+.Results-header,
+.Detail-header {
+  background-color: #256763;
+  /* Dark Teal */
+  padding: 1rem;
+  width: 100%;
+  color: white;
+}
+
+.Home-title,
+.Results-title,
+.Detail-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FFF8F7;
+  /* Light Pink */
+}
+
+/* Detail Styles */
+.Detail {
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #7ACA73;
+  text-align: center;
+  /* Light Green */
+}
+
+.Detail-content {
+  text-align: center;
+}
+.Detail-back-button {
+  background-color: #256763;
+  /* Dark Teal */
+  color: white;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.Detail-back-button:hover {
+  background-color: #4ABEB0;
+  /* Teal */
+  transform: scale(1.05);
+  /* Ligeramente más grande en hover */
+}
+
+.Detail-back-button:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgba(74, 190, 176, 0.6);
+  /* Sombra intensa para accesibilidad */
+}
+
+.Detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.Detail-ingredients {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.Detail-ingredients li {
+  background-color: #4ABEB0;
+  /* Teal */
+  color: white;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+/* Pagination Styles */
+.Pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 80%;
+  max-width: 600px;
+  margin: 1rem auto;
+  /* Center the pagination */
+}
+.Pagination-Button {
+  background-color: #256763;
+  /* Dark Teal */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Pagination-Button:hover {
+  background-color: #4ABEB0;
+  /* Teal */
+}
+
+.Pagination-Button.active {
+  background-color: #4ABEB0;
+  /* Teal */
 }
