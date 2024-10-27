@@ -1,25 +1,33 @@
-// src/Home.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function Home({ setRecipes }) {
-  const [query, setQuery] = useState('');
+function Home({ setRecipes, setQuery }) {
+  const [localQuery, setLocalQuery] = useState('');
 
-  const searchRecipes = async () => {
-    const response = await axios.get(`http://localhost:3000/recipes?ingredient=${query}`);
-    setRecipes(response.data);
+  const searchRecipes = async (query) => {
+    try {
+      const response = await axios.get('http://localhost:3001/recipes', {
+        params: { ingredients: query }
+      });
+      setRecipes(response.data);
+      setQuery(query); 
+    } catch (error) {
+      console.error('Error fetching recipes:', error);
+    }
   };
 
   return (
     <div>
-      <h1>Recipe Finder</h1>
-      <input
-        type="text"
-        placeholder="Search by ingredient"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button onClick={searchRecipes}>Search</button>
+      <div className="search-bar">
+        <i className="icon-search"></i>
+        <input
+          type="text"
+          placeholder="Search by ingredients (comma separated)"
+          value={localQuery}
+          onChange={(e) => setLocalQuery(e.target.value)}
+        />
+        <button onClick={() => searchRecipes(localQuery)}>Search</button>
+      </div>
     </div>
   );
 }
