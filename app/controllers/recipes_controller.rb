@@ -1,12 +1,10 @@
 class RecipesController < ApplicationController
   def index
-    ingredient = params[:ingredient]
-    recipes = ingredient.present? ? Recipe.search_by_ingredient(ingredient) : Recipe.all
+    ingredients = params[:ingredients]
+    recipes = ingredients.present? ? Recipe.search_by_ingredients(ingredients) : Recipe.all
     render json: recipes, include: :ingredients
-  end
-
-  def show
-    recipe = Recipe.find(params[:id])
-    render json: recipe, include: :ingredients
+  rescue => e
+    Rails.logger.error "Error fetching recipes: #{e.message}"
+    render json: { error: "Error fetching recipes" }, status: 500
   end
 end
