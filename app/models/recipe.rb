@@ -6,7 +6,7 @@ class Recipe < ApplicationRecord
   def self.search_by_ingredients(ingredients)
     # Prepare each ingredient term for a partial match
     ingredients_array = ingredients.split(",").map { |ingredient| "%#{ingredient.strip}%" }
-    Rails.logger.debug "Processed Ingredients Array for Partial Match: #{ingredients_array}"
+
 
     # Build the SQL to match with the ingredient
     recipes = joins(:ingredients)
@@ -14,6 +14,7 @@ class Recipe < ApplicationRecord
               .group("recipes.id")
               .select("recipes.*, COUNT(ingredients.id) AS matched_ingredients_count")
               .order("matched_ingredients_count DESC")
+              .limit(40)
 
     recipes
   end
