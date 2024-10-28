@@ -3,16 +3,23 @@ import axios from 'axios';
 
 function Home({ setRecipes, setQuery }) {
   const [localQuery, setLocalQuery] = useState('');
+  const [message, setMessage] = useState('');
 
   const searchRecipes = async (query) => {
     try {
       const response = await axios.get('http://localhost:3001/recipes', {
         params: { ingredients: query }
       });
+      if (response.data.length === 0) {
+        setMessage('No recipes found');
+      } else {
+        setMessage('');
+      }
       setRecipes(response.data);
-      setQuery(query); 
+      setQuery(query); // Pass the query to the App component
     } catch (error) {
       console.error('Error fetching recipes:', error);
+      setMessage('Error fetching recipes');
     }
   };
 
@@ -28,6 +35,7 @@ function Home({ setRecipes, setQuery }) {
         />
         <button onClick={() => searchRecipes(localQuery)}>Search</button>
       </div>
+      {message && <p>{message}</p>}
     </div>
   );
 }
