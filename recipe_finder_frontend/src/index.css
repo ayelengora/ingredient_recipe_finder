@@ -4,12 +4,11 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #FFF8F7;
-  /* Light Pink */
   margin: 0;
   padding: 0;
 }
 
-/* App Styles */
+/* App Style */
 .App {
   text-align: center;
 }
@@ -39,100 +38,75 @@ body {
   color: white;
 }
 
-/* Contenedor de la barra de búsqueda */
+/* searchbar style*/
 .search-bar {
   display: flex;
   align-items: center;
   gap: 1rem;
-  /* Espacio entre el input y el botón */
   max-width: 600px;
   margin: 2rem auto;
-  /* Centrar la barra de búsqueda */
   padding: 0.5rem;
   background-color: #b8f3e7;
-  /* Light Green */
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  /* Sombra ligera */
 }
 
-/* Icono de la barra de búsqueda */
-.search-bar .icon-search {
+.search-bar .fa-search {
   color: #256763;
-  /* Dark Teal */
   font-size: 1.2rem;
   margin-left: 0.5rem;
-  /* Espacio entre el icono y el borde */
 }
 
-/* Estilo del input */
 .search-bar input[type="text"] {
   flex-grow: 1;
   padding: 1rem 1rem;
   font-size: 1rem;
   border: none;
   border-radius: 8px 8px 8px 8px;
-  /* Bordes solo en las esquinas derechas */
   background-color: transparent;
-  /* Fondo transparente para integrarse con el contenedor */
   color: #256763;
-  /* Dark Teal */
   outline: none;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
   text-align: center;
-  /* Center text horizontally */
   display: flex;
   align-items: center;
-  /* Center text vertically */
   justify-content: center;
-  /* Center text horizontally */
 }
 
-/* Hover y focus para el input */
+/* Hover and focus input */
 .search-bar input[type="text"]:focus {
   font-family: sans-serif;
   font-size: 1rem;
   color: #256763;
-  /* Dark Teal */
   border-color: #4ABEB0;
-  /* Teal */
   box-shadow: 0 0 5px rgba(74, 190, 176, 0.3);
-  /* Sombra ligera en focus */
 }
 
-/* Estilo del botón */
 .search-bar button {
   background-color: #d96f2d;
-  /* Dark Teal */
   color: white;
   padding: 0.5rem 1.5rem;
   font-size: 1rem;
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  /* Bordes redondeados */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover y focus para el botón */
+/* Hover and focus button */
 .search-bar button:hover {
   background-color: #e08e5b;
-  /* Teal */
   transform: scale(1.05);
-  /* Ligeramente más grande en hover */
 }
 
 .search-bar button:focus {
   outline: none;
   box-shadow: 0 0 6px rgba(74, 190, 176, 0.6);
-  /* Sombra intensa para accesibilidad */
 }
 
-/* Results Styles */
 .Results {
   background-color: #256763;
-  /* Light Green */
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -146,12 +120,10 @@ body {
   font-weight: bold;
   margin-bottom: 1rem;
   color: #d96f2d;
-  /* Dark Teal */
 }
 
 .Results-List {
   background-color: #d7f2ef;
-  /* Teal */
   padding: 1rem;
   border-radius: 8px;
   list-style-type: none;
@@ -168,15 +140,12 @@ body {
 
 .Results-Item:hover {
   background-color: #256763;
-  /* Dark Teal */
   color: white;
 }
-/* Header Styles */
 .Home-header,
 .Results-header,
 .Detail-header {
   background-color: #256763;
-  /* Dark Teal */
   padding: 1rem;
   width: 100%;
   color: white;
@@ -188,9 +157,7 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: #FFF8F7;
-  /* Light Pink */
 }
-/* Detail Styles */
 .Detail {
   padding: 2rem;
   border-radius: 12px;
@@ -205,6 +172,7 @@ body {
 .Detail-content {
   text-align: center;
 }
+
 .Detail-image {
   background-image: url("https://via.placeholder.com/300");
   background-size: cover;
@@ -214,7 +182,7 @@ body {
   border-radius: 8px;
   margin-bottom: 1rem;
 }
-/* Back Button Styling at Bottom */
+
 .Detail-back-button {
   background-color: #d96f2d;
   color: white;
@@ -227,7 +195,6 @@ body {
   transition: background-color 0.3s ease, box-shadow 0.2s ease;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
-  /* Adds space above the button */
 }
 
 .Detail-back-button:hover {
@@ -241,7 +208,6 @@ body {
   padding: 0;
   text-align: center;
   width: 70%;
-  /* Reduce width */
   margin: 1rem auto;
 }
 
@@ -254,7 +220,6 @@ body {
   margin-bottom: 0.6rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
   max-width: 80%;
-  /* Center text and reduce width */
   margin-left: auto;
   margin-right: auto;
 }
@@ -272,11 +237,10 @@ body {
   width: 80%;
   max-width: 600px;
   margin: 1rem auto;
-  /* Center the pagination */
 }
+
 .Pagination-Button {
   background-color: #256763;
-  /* Dark Teal */
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -288,10 +252,8 @@ body {
 
 .Pagination-Button:hover {
   background-color: #4ABEB0;
-  /* Teal */
 }
 
 .Pagination-Button.active {
   background-color: #4ABEB0;
-  /* Teal */
 }

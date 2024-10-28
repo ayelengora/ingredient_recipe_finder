@@ -26,7 +26,7 @@ function Home({ setRecipes, setQuery }) {
   return (
     <div>
       <div className="search-bar">
-        <i className="icon-search"></i>
+        <i className="fas fa-search"></i>
         <input
           type="text"
           placeholder="Search by ingredients (comma separated)"
