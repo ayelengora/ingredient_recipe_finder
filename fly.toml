@@ -7,6 +7,10 @@ app = 'app-delicate-wave-6103-db'
 primary_region = 'mad'
 console_command = '/rails/bin/rails console'
 
+[[mounts]]
+source = "vol_49kpgd0opz2o7n6v"
+destination = "/data"  
+
 [build]
 
 [http_service]
