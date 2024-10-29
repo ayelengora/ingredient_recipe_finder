@@ -8,8 +8,8 @@ primary_region = 'mad'
 console_command = '/rails/bin/rails console'
 
 [[mounts]]
-source = "vol_v306zdq6e1dnkpxv"
-destination = "/pg_data"  
+source = 'vol_v306zdq6e1dnkpxv'
+destination = '/pg_data'  
 
 [build]
 
