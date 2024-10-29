@@ -3,7 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'app-cool-snowflake-2252'
+app = 'app-delicate-wave-6103-db'
 primary_region = 'mad'
 console_command = '/rails/bin/rails console'
 
