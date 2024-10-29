@@ -11,17 +11,17 @@ RSpec.describe RecipesController, type: :controller do
 
     before do
       # Associate ingredients with recipes
-      recipe1.ingredients << [ingredient1, ingredient2]
-      recipe2.ingredients << [ingredient3]
+      recipe1.ingredients << [ ingredient1, ingredient2 ]
+      recipe2.ingredients << [ ingredient3 ]
     end
 
     context "when ingredients are provided" do
       it "returns recipes that match the specified ingredients" do
         get :index, params: { ingredients: "tomato" }
-        
+
         expect(response).to have_http_status(:success)
         json_response = JSON.parse(response.body)
-        
+
         # Updated expectation based on response structure
         expect(json_response.length).to eq(1)
         expect(json_response.first["title"]).to eq("Tomato Pasta")
@@ -32,7 +32,6 @@ RSpec.describe RecipesController, type: :controller do
 
         expect(response).to have_http_status(:success)
         json_response = JSON.parse(response.body)
-        
         # Updated expectation based on response structure
         expect(json_response.length).to eq(1)
         expect(json_response.first["title"]).to eq("Tomato Pasta")
@@ -59,7 +58,6 @@ RSpec.describe RecipesController, type: :controller do
 
         expect(response).to have_http_status(:internal_server_error)
         json_response = JSON.parse(response.body)
-        
         expect(json_response["error"]).to eq("Error fetching recipes")
       end
     end
