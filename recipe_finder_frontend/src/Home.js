@@ -7,9 +7,9 @@ function Home({ setRecipes, setQuery }) {
 
   const searchRecipes = async (query) => {
     try {
-      const response = await axios.get('http://localhost:3001/recipes', {
-        params: { ingredients: query }
-      });
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/recipes`, {
+      params: { ingredients: query }
+    });
       if (response.data.length === 0) {
         setMessage('No recipes found');
       } else {

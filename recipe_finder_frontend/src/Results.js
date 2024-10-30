@@ -36,7 +36,7 @@ function Results({ recipes, selectRecipe, query }) {
                 className="Results-Item"
                 onClick={() => selectRecipe(recipe)}
               >
-                {recipe.title}
+              {recipe.title}
               </li>
             ))}
           </ul>
@@ -46,7 +46,7 @@ function Results({ recipes, selectRecipe, query }) {
                 onClick={() => handlePageChange(currentPage - 1)}
                 className="Pagination-Button"
               >
-                &laquo;
+              &laquo;
               </button>
             )}
             {Array.from({ length: endPage - startPage + 1 }, (_, index) => (

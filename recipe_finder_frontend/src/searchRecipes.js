@@ -2,8 +2,8 @@ import axios from 'axios';
 
 async function searchRecipes(query) {
   try {
-    const response = await axios.get(`http://localhost:3000/recipes`, {
-      params: { search: query }
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/recipes`, {
+    params: { search: query }
     });
     return response.data;
   } catch (error) {
