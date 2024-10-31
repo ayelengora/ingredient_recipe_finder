@@ -15,7 +15,7 @@ Features
 
 Search recipes by ingredients
 
-View details: prep time, cook time, ratings
+View details: prep time, cook time, ingredients
 
 
 
@@ -49,22 +49,6 @@ cd recipe_finder_frontend
 npm install
 npm run build
 
-bash
-cp -r recipe_finder_frontend/build/* ../public/
-Environment Variables
-
-Create a .env file in recipe_finder_frontend with the following:
-
-bash
-REACT_APP_API_URL=https://ingredient-recipe-finder.fly.dev
-Running Locally
-Start Rails Server
-
-bash
-rails server
-Access the App
-
-Visit http://localhost:3000 in your browser.
 
 Load Recipes
 To load recipes from recipes-en.json, run the following Rake task:
