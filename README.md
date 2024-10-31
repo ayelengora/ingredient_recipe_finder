@@ -1,6 +1,7 @@
 Ingredient Recipe Finder
 
 A web app to find recipes based on ingredients you have. Built with Ruby on Rails (backend) and React (frontend), deployed on Fly.io.
+https://ingredient-recipe-finder.fly.dev/
 
 Tech Stack
 
