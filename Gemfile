@@ -26,7 +26,7 @@ gem "rack-cors"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
-gem "rspec-rails", "~> 7.0"
+gem "rspec-rails", "~> 7.1"
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin Ajax possible
 # gem "rack-cors"
 
